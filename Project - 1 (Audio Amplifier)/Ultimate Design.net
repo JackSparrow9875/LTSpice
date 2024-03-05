@@ -1,0 +1,41 @@
+* C:\Users\RISHIVEER YADAV\OneDrive\Desktop\LTSpice\Lab Work and Projects\Project - 1 (Audio Amplifier)\Ultimate Design.asc
+V1 VCC 0 12
+V2 VEE 0 -12
+Q1 N011 N012 N015 0 BC547B
+V3 N012 0 SINE(0 20m 1000) AC 1
+Q2 N004 0 N015 0 BC547B
+R3 VCC N011 6k
+R4 VCC N004 6k
+C1 N013 N004 10µ
+R5 VCC N013 220k
+R6 VCC N005 8k
+R7 N013 VEE 25k
+Q3 N005 N013 N016 0 BC547B
+C2 N006 N005 10µ
+R9 N016 VEE 1k
+R2 N015 VEE 5k
+R1 N007 N006 8k
+C3 N001 N007 1µ
+XU1 0 N001 VCC VEE N002 level1 Avol=1Meg GBW=10Meg Vos=0 En=0 Enk=0 In=0 Ink=0 Rin=500Meg
+C4 N008 N002 10µ
+C5 N002 N001 1n
+R10 N002 N001 8k
+D1 N003 N008 1N4007
+R8 VCC N003 1k
+D2 N008 N014 1N4007
+R11 N014 VEE 1k
+Q4 VCC N003 N009 0 QTIP31A
+Q5 VEE N014 N009 0 QTIP32A
+C6 N010 N009 1µ
+.model D D
+.lib C:\Users\RISHIVEER YADAV\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\RISHIVEER YADAV\AppData\Local\LTspice\lib\cmp\standard.bjt
+;tran 10m
+.lib tip31a.lib
+.lib tip32a.lib
+.ac dec 20 1 1000k
+.lib UniversalOpAmp1.lib
+.backanno
+.end
