@@ -1,0 +1,16 @@
+* C:\Users\RISHIVEER YADAV\OneDrive\Desktop\LTSpice\Lab Work and Projects\Project -2 (Boost Converter Circuit)\Boost Converter Circuit.asc
+L1 N001 N002 200µ
+M1 N002 N004 0 0 IRF510
+V1 N001 0 5
+V2 N004 0 PULSE(0 7 0 0 0 5.83u 10u)
+D1 N002 N003 MBRS140
+C1 N003 0 22µ
+R1 N003 0 118.3
+.model D D
+.lib C:\Users\RISHIVEER YADAV\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\RISHIVEER YADAV\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 10m
+.backanno
+.end

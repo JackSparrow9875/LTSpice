@@ -1,0 +1,13 @@
+1) Use of capacitor (maintains voltage at the load)
+2) Varying mosfet's supply voltage changes the load voltage
+3) Is the circuit independent of the load resistance (not probably)
+
+Upon speculation:
+1) While the circuit is closed (MOSFET is active), then the load resistance is out of view
+and the capacitor starts discharging. This helps in maintaining the voltage across the load and because of the resistance of the load, this consumes some current. The product of these two parameters gives us the power of the circuit which remains constant. Using this we find the input current (by dividing the power with the input voltage).
+	
+2) We have first assumed the value of the inductor to be constant and then found of the value of the difference in I_in, then the value of power and then the output resistance value.
+
+
+Practical:
+1) Changed the output resistance to 100k (from 118.3 ohms)
